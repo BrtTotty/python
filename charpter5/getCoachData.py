@@ -19,10 +19,12 @@ def get_coach_data(fileName):
     except IOError as ioErr:
         print('File Error: ' + str(ioError))
         return None
+        
 james = get_coach_data('james.txt')
 julie = get_coach_data('julie.txt')
 mikey = get_coach_data('mikey.txt')
 sarah = get_coach_data('sarah.txt')
+
 print("james fastest three times: ", james)
 print("james fastest three times: ", mikey)
 print("james fastest three times: ", julie)
