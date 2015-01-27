@@ -11,7 +11,7 @@ def sanitize(time_string):
 
 def get_coach_data(fileName):
     try:
-        os.chdir('F:\\GitHub\\python\\charpter5')
+        os.chdir('F:\\GitHub\\python\\bookShare')
         with open(fileName) as openedFile :
             data = openedFile.readline()
             listData = data.strip().split(',')
@@ -19,7 +19,6 @@ def get_coach_data(fileName):
     except IOError as ioErr:
         print('File Error: ' + str(ioError))
         return None
-
 james = get_coach_data('james.txt')
 julie = get_coach_data('julie.txt')
 mikey = get_coach_data('mikey.txt')
