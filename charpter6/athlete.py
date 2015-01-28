@@ -20,7 +20,9 @@ class Athlete:
         self.times.append(time_value)
     def add_times(self, list_time):
         self.times.extend(list_time)
-        
+    def add_dob(self, a_dob):
+        self.dob = a_dob
+    
 def getCoachData(fileName):
     try:
         os.chdir('F:\\GitHub\\python\\bookShare')
@@ -41,3 +43,10 @@ print(james.name + "'s fastest three times are: " + str(james.top3()))
 print(julie.name + "'s fastest three times are: " + str(julie.top3()))
 print(mikey.name + "'s fastest three times are: " + str(mikey.top3()))
 print(sarah.name + "'s fastest three times are: " + str(sarah.top3()))
+
+vera = Athlete('Vera Vi')
+vera.add_time('1.31')
+vera.add_dob('2001-3-12')
+vera.add_times(['2-22', '1-21', '2:22'])
+print(vera.name + "'s fastest three times are: " + str(vera.top3()))
+
